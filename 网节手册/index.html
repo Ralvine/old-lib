@@ -1,0 +1,1576 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>网节手册 - Mind Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Mind Library" class="md-header__button md-logo" aria-label="Mind Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mind Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              网节手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        观点
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../tags.md" class="md-tabs__link">
+      标签
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://ralvine.github.io/about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mind Library" class="md-nav__button md-logo" aria-label="Mind Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mind Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          观点
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="观点" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          观点
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          测试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          网节手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        网节手册
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    网节手册
+  </a>
+  
+    <nav class="md-nav" aria-label="网节手册">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    总体规划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    内容与题材
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    物资准备
+  </a>
+  
+    <nav class="md-nav" aria-label="物资准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    宣传品
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    线下物资
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    讲座物资
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    线上组
+  </a>
+  
+    <nav class="md-nav" aria-label="线上组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    问题与注意事项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    讲座组
+  </a>
+  
+    <nav class="md-nav" aria-label="讲座组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    具体要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    线下组
+  </a>
+  
+    <nav class="md-nav" aria-label="线下组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    子活动范例
+  </a>
+  
+    <nav class="md-nav" aria-label="子活动范例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2019" class="md-nav__link">
+    2019年：我的原型设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20182019vr" class="md-nav__link">
+    2018/2019年：VR节奏光剑体验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2018ipad" class="md-nav__link">
+    2018年：Ipad × 无人机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2019_1" class="md-nav__link">
+    2019年：故事续写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20193d" class="md-nav__link">
+    2019年：3D打印机展示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    子活动设想
+  </a>
+  
+    <nav class="md-nav" aria-label="子活动设想">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    健身环体验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    密码学小游戏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    具体要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          意识形态
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="意识形态" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          意识形态
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideology/mqz-1/" class="md-nav__link">
+        给中国新媒体的八条标准
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideology/mqz-2/" class="md-nav__link">
+        民族主义与左派联姻下的当代中国
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideology/slz-1/" class="md-nav__link">
+        阿拉伯之春在欧洲
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideology/fsz-1/" class="md-nav__link">
+        全输-全赢博弈与当代中国政治的变迁与改革
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideology/mqz-3/" class="md-nav__link">
+        寻找初心，新青年的“6+1”攻略
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          文化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文化" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          文化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../culture/ygz-1/" class="md-nav__link">
+        中国文字的常态与变态
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          历史
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="历史" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          历史
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history/united-1/" class="md-nav__link">
+        我在中央统战部做知识分子工作的往事
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.md" class="md-nav__link">
+        标签
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ralvine.github.io/about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    网节手册
+  </a>
+  
+    <nav class="md-nav" aria-label="网节手册">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    总体规划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    内容与题材
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    物资准备
+  </a>
+  
+    <nav class="md-nav" aria-label="物资准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    宣传品
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    线下物资
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    讲座物资
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    线上组
+  </a>
+  
+    <nav class="md-nav" aria-label="线上组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    问题与注意事项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    讲座组
+  </a>
+  
+    <nav class="md-nav" aria-label="讲座组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    具体要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    线下组
+  </a>
+  
+    <nav class="md-nav" aria-label="线下组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    子活动范例
+  </a>
+  
+    <nav class="md-nav" aria-label="子活动范例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2019" class="md-nav__link">
+    2019年：我的原型设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20182019vr" class="md-nav__link">
+    2018/2019年：VR节奏光剑体验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2018ipad" class="md-nav__link">
+    2018年：Ipad × 无人机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2019_1" class="md-nav__link">
+    2019年：故事续写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20193d" class="md-nav__link">
+    2019年：3D打印机展示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    子活动设想
+  </a>
+  
+    <nav class="md-nav" aria-label="子活动设想">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    健身环体验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    密码学小游戏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    具体要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>网节手册</h1>
+
+<h2 id="_1">网节手册</h2>
+<div class="toc">
+<ul>
+<li><a href="#_1">网节手册</a><ul>
+<li><a href="#_2">介绍</a></li>
+<li><a href="#_3">总体规划</a></li>
+<li><a href="#_4">内容与题材</a></li>
+<li><a href="#_5">物资准备</a><ul>
+<li><a href="#_6">宣传品</a></li>
+<li><a href="#_7">线下物资</a></li>
+<li><a href="#_8">讲座物资</a></li>
+</ul>
+</li>
+<li><a href="#_9">线上组</a><ul>
+<li><a href="#_10">任务</a></li>
+<li><a href="#_11">问题与注意事项</a></li>
+</ul>
+</li>
+<li><a href="#_12">讲座组</a><ul>
+<li><a href="#_13">任务</a></li>
+<li><a href="#_14">注意事项</a></li>
+<li><a href="#_15">具体要求</a></li>
+</ul>
+</li>
+<li><a href="#_16">线下组</a><ul>
+<li><a href="#_17">任务</a></li>
+<li><a href="#_18">子活动范例</a><ul>
+<li><a href="#2019">2019年：我的原型设计</a></li>
+<li><a href="#20182019vr">2018/2019年：VR节奏光剑体验</a></li>
+<li><a href="#2018ipad">2018年：Ipad × 无人机</a></li>
+<li><a href="#2019_1">2019年：故事续写</a></li>
+<li><a href="#20193d">2019年：3D打印机展示</a></li>
+</ul>
+</li>
+<li><a href="#_19">子活动设想</a><ul>
+<li><a href="#_20">健身环体验</a></li>
+<li><a href="#_21">密码学小游戏</a></li>
+</ul>
+</li>
+<li><a href="#_22">注意事项</a></li>
+<li><a href="#_23">具体要求</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="_2">介绍</h3>
+<p>网络文化节从2003年开办，但很早的活动内容早已无从考证。只是从老老人口中听说曾邀请过两次马云（在阿里巴巴还不火的时候）。无论何时，网络都是在高速发展的事物，网节的目的既让浙大的学生对于网络空间有更多地了解，为大家做出某些贡献。但随着网络世界的发展与交叉联系，在近年，“科技”，“信息”等领域也都可以作为网节的内容与主旨。</p>
+<p>我们举办网节是一个比较自由的活动，没有特别大的约束，故在主题上我们也是如此。尽管校内的活动往往以娱乐为主，但我们仍然希望能通过活动给学生或学校带来些许收获，而不是仅仅娱乐。</p>
+<p>作为贵潮所剩不多的自主性较强的活动，希望各位能发挥其价值，愉快地工作并较好的完成。</p>
+<h3 id="_3">总体规划</h3>
+<p><strong>人员：</strong></p>
+<p>网节一般由 <strong>线下/线上/讲座</strong>三部分构成，当然分组不是固定的，可以根据当年的情况适时安排。</p>
+<p>各小组应有其组长，此外应有总负责人主要和中管对接完成总体的筹划工作。</p>
+<p><strong>时间</strong></p>
+<p>一般在夏学期第一周，处期中考试后第一周，大家时间较为空余。或清明假期附近。根据天气等其他因素略有调整。线下活动一般持续1-2天，周五下午试运行，周六周日为主要时间。讲座可以穿插在前后一个月的周末，讲座需要协调好空余时间，避免与复习时间，形策课，学院学园活动冲撞。</p>
+<h3 id="_4">内容与题材</h3>
+<p>列出一些可参考的与主题相关的题材</p>
+<p><strong>可参考的题材：（这里线上/线下/讲座都可以涉及</strong></p>
+<ul>
+<li>历史类：着重讲解网络/某类技术/科技的发展历史</li>
+<li>网络暴力与网络谣言</li>
+<li>新兴科技的发展与体验：5G、3D打印</li>
+<li>与校内实验室合作的前沿科技展览/讲解</li>
+<li>与生活紧密结合的相关主题：如大数据科技在生活中</li>
+<li>某一领域的行业人物的经验分享交流：如曾举办的快手分享，</li>
+</ul>
+<h3 id="_5">物资准备</h3>
+<h4 id="_6">宣传品</h4>
+<p><strong>宣传品制作与打印需要时间！请务必给设计师/学工部审核/打印店留好时间</strong></p>
+<ul>
+<li>各种size的主海报/讲座海报（以下列出最低要求）：</li>
+<li>A1：线下需要两张在帐篷两侧</li>
+<li>A3：35张，用于贴在各个寝室楼下<ul>
+<li>注意：这里需要先盖章才能贴！</li>
+</ul>
+</li>
+<li>传单：</li>
+<li>800-1000张比较合理，然而全校那么多人，发这么点其实不太够的，但是需要考虑到大家的发传单战斗力</li>
+<li>一般先多印一些（600，根据某一天的发放张数测算</li>
+<li>在文广/三大学园门口，于晚饭左右时刻散发</li>
+<li>门把手宣传品</li>
+<li>18年鸡精发明，挂在各个寝室门把手上，避免了敲门发传单的尴尬且不合法</li>
+<li>具体的设计可以参考18网节/19秋纳</li>
+<li>横幅：Slogan 标语2~3条，由安放横幅的师傅安放</li>
+<li>线下/讲座易拉宝：</li>
+<li>易拉宝有两种尺寸：一般称之为易拉宝尺寸和海报尺寸。我们一般选取海报尺寸的，那种直接拉起来就可以，否则是需要支架，比较脆弱。</li>
+<li>min - 数量：线下需要两个，各个讲座需要两个。</li>
+<li>周边：</li>
+<li>与活动内容/有关的一些纪念品，也可以作为礼品，以下列出一些曾用过的</li>
+<li>钥匙扣（亚克力</li>
+<li>校园卡套</li>
+<li>帆布袋</li>
+<li>贴纸</li>
+<li>联名款可口可乐</li>
+</ul>
+<h4 id="_7">线下物资</h4>
+<ul>
+<li>场地：</li>
+<li>文广B区效果最佳，否则需要大概一排C区</li>
+<li>一般来说除了活动当个周末。还需要借一个备用的时间段。</li>
+<li>
+<p>由于是先到先得制，建议早一点（一个月）借。如果是需要月牙楼，可能需要更早。</p>
+</li>
+<li>
+<p>帐篷和会搭帐篷的人</p>
+</li>
+<li>桌椅：使用贵潮物资或向其他的组织社团借用。请带够一点，工作人员很累的。</li>
+<li>音响：2020年，贵潮有一大一小两个音响，都可以使用。请不要忘了提前充电。</li>
+<li>接线板：在文广场地需要接电的情况下使用（一般都接电），也可以给工作人员手机充电</li>
+<li>准备好的相关礼品</li>
+<li>相关活动物资与宣传品</li>
+<li>收纳工具：现场可能有各种散件，建议使用一些纸箱等方便打包搬运。</li>
+</ul>
+<h4 id="_8">讲座物资</h4>
+<ul>
+<li>场地</li>
+<li>临水/蒙民伟/医学院辅楼，请根据预期人数提早安排</li>
+<li>相关仪器设备</li>
+<li>视频可能需要的设备——通知视频即可</li>
+<li>播放投影的电脑与各类转接头，充电器，接线板。</li>
+<li>展示电脑的桌面：一般 由主海报改成的专门的PPT背景类似物</li>
+<li>可能需要的专门的PPT</li>
+<li>横幅：挂在讲座场地最前或最后</li>
+<li>嘉宾礼品</li>
+<li>讲座礼品</li>
+<li>一个熟练操作电脑技巧的工作人员，技能包括但不限于</li>
+<li>熟练使用投影设备</li>
+<li>熟练使用求是潮抽奖系统</li>
+<li>熟练使用“扩展”方式的投影仪</li>
+<li>麦克风等由场地提供，请提前询问场地工作人员如麦克风数量等物资</li>
+</ul>
+<h3 id="_9">线上组</h3>
+<p>线上组的定位往往是为线下活动/讲座预热的，当然，在有比较好的创意的情况下，也可以将一些线上活动作为主打。</p>
+<h4 id="_10">任务</h4>
+<p>顾名思义，线上组的工作包括但不限于：</p>
+<ul>
+<li>线上的宣传</li>
+<li>线上的活动，下面列出以往可参考的</li>
+<li>2018年：包含宣传和一些价值观输出的<strong>橙光游戏</strong><ul>
+<li>问题：橙光游戏剧本不过关；且爱好的用户不多；橙光游戏设计稿需求高</li>
+</ul>
+</li>
+<li>2018年：一款线上的H5小游戏<ul>
+<li>问题：游戏性与流畅度均不足，没有起到宣传的作用且耗费了大量人力物力</li>
+</ul>
+</li>
+<li>2019年：线上讲座<ul>
+<li>问题：疫情期间的尝试，以讲座为主，这里仅仅列在这里</li>
+</ul>
+</li>
+<li>线上征集</li>
+<li>由于与网节同期的往往有教育部展开的”网络文化节“作品征集，线上组也需要制作相应的推文征集作品，设置奖品与赛制。<ul>
+<li>从历年情况来看，基本上没什么人报名参加，都是自己人写稿自己人拿奖。应付学工部任务罢了。</li>
+<li>也可以联系摄影部，举办摄影大赛（摄影部活动）等</li>
+</ul>
+</li>
+</ul>
+<h4 id="_11">问题与注意事项</h4>
+<ul>
+<li>
+<p>线上组活动往往需要大量的宣传品（设计物料），故策划时需要反复打磨，以免浪费设计师或工程师的心血。</p>
+</li>
+<li>
+<p>当代的信息量过于繁杂，公众号信息也多如牛毛，如何吸引用户是需要格外考虑的，包括以下两点</p>
+</li>
+<li>
+<p>如何让用户看到——&gt; 这主要是宣传，会在宣传部分解释</p>
+</li>
+<li>让用户看到后并乐意来参加，否则也无法起到线上的作用。</li>
+</ul>
+<p>要做到第二点，这需要我们有较高的推文质量（合作推广），也要在活动上有较多的新意。可以结合当下比较火热的热点形式或题材。列在下面参考</p>
+<ul>
+<li>如何将较好的题材，以可以让参与者感受到我们的意图得较好的形式表现也是一件值得思考且比较困难的事情。如网络暴力，每年都有提及，但找不到较好的形式。</li>
+</ul>
+<p><strong>可参考的活动形式：</strong></p>
+<ul>
+<li>橙光游戏</li>
+<li>H5小游戏（移动端/网页端</li>
+<li>互动视频</li>
+<li>线上比赛/讲座/征集</li>
+<li>内容输出（类似资讯那种风格，比较有深度的文字</li>
+</ul>
+<h3 id="_12">讲座组</h3>
+<h4 id="_13">任务</h4>
+<p><strong>确认讲座嘉宾与主题</strong></p>
+<p>材可以参考先前内容部分，在其基础上，作为一个具体的讲座，可以就某一话题深入展开。</p>
+<p>相关的题材可以参考先前内容部分，在其基础上，作为一个具体的讲座，可以就某一话题深入展开。</p>
+<p>值得注意的是，请确保</p>
+<ul>
+<li>讲座具有足够的价值。本身就是我们自己选的嘉宾，选的时候就要注意是否能吸引到足够的观众等。</li>
+<li>届时有足够的到场人数——通过各种手段，否则不太尊重嘉宾，包括</li>
+<li>工作人员顶包，光工作人员大概就20个人了</li>
+<li>各类宣传渠道并进</li>
+<li>联系相关老师在学院群内宣传，最好能加计院形策分（必杀技）</li>
+</ul>
+<p><strong>联系嘉宾</strong></p>
+<p>2019年及以前，似乎都是先我们联系，对方同意后学工部审核。但隐患是若学工部审核不过可能会扑街，如2019年邀请到RNG战队，但因学工部不同意而崩盘。（注：窝瓜有若风的微信）。这显然不太好，故也可以先提前准备名单，学工部审核后邀请。邀请的方式包括但不限于</p>
+<ul>
+<li>微博私信</li>
+<li>对方留下的联系方式</li>
+<li>学校老师介绍等</li>
+</ul>
+<p>联系到嘉宾后请反复确定讲座主题，时间，预期人数等各种信息，确保嘉宾方无疏漏。</p>
+<p>按惯例，我们会为其提供机酒，也请与学工部，嘉宾，三方有较好的沟通。注意接洽期间注意礼貌。</p>
+<p>线下讲座一般艺人都会需要提前1~2个月以上，线上讲座可能略好一些，故请确保讲座工作及早的开始（寒假期间）。</p>
+<p><strong>确保讲座平稳进行</strong></p>
+<p>包括但不限于</p>
+<ul>
+<li>提前排练</li>
+<li>与其他部门的合作沟通好，如<strong>一个主持人</strong>，一个摄影部拍照，询问视频是否要全程录像或B站直播，一个资讯同学写新闻稿（报销用），留好相关发票等</li>
+<li>到时候的物资准备齐全</li>
+<li>准备一些预案，如：</li>
+<li>现场到场人数不足时，岔开坐，显得多</li>
+<li>主持人提问但没人举手：提前安排好托和对应的问题</li>
+</ul>
+<h4 id="_14">注意事项</h4>
+<p>格外需要注意的再次强调</p>
+<ul>
+<li>反复确认讲座流程熟练无误，各设备安好，工作人员合理排班。</li>
+<li>做好各项可预见情况的紧急预案</li>
+<li>与学工部做好沟通，据理力争，不要学工部说不行就真不行，要询问具体的原因，以及回应。确保我们的内容有价值的情况下争取办好。</li>
+<li>讲座贵在精而不在多，一个优质的主题/内容/嘉宾的讲座顶的上五个普通的，故要在主题质量上多下功夫。</li>
+</ul>
+<h4 id="_15">具体要求</h4>
+<p>一个成功的讲座需要有以下要素：</p>
+<ul>
+<li>自己首先确认我是否邀请，请的目的是什么，能否吸引大家前来</li>
+<li>前期与学工部，嘉宾的万无一失的对接</li>
+<li>预计人数并安排合适的场地<ul>
+<li>不要一味求大，300人场你坐30人不难看吗</li>
+</ul>
+</li>
+<li>讲座的宣传到位</li>
+<li>推文与传单 以及  其他新颖的宣传方式</li>
+<li>现场需要做到以下</li>
+<li>一位主持人主持；一位视频录像/直播（可选）；一位摄影拍照（也可以视频代替）；一位资讯写新闻稿</li>
+<li>场地布置<ul>
+<li>横幅，机位，易拉宝，观众号码牌</li>
+</ul>
+</li>
+<li>物资准备<ul>
+<li>转接头，翻页笔，电脑</li>
+<li>嘉宾礼品，提问奖品</li>
+</ul>
+</li>
+<li>主讲人的PPT与活动背景PPT<ul>
+<li>请熟练使用扩展投影方式，观众不想知道你的桌面到底有什么，</li>
+<li>桌面壁纸也换成讲座主题的</li>
+<li>配套PPT翻页笔与嘉宾沟通好，且确保可以使用</li>
+<li>请熟练使用<strong>求是潮抽奖系统</strong></li>
+<li>请提前预演投影，不要到了才发现没有转接头</li>
+</ul>
+</li>
+<li>安排好托防止提问环节没有人提问的尴尬情况</li>
+<li>如何吸引浙大学生前来是最重要的话题（一般100人以上就算还可以了</li>
+<li>主题有趣，宣传到位，不需要额外的操作是我们的希望，否则可以尝试如下</li>
+<li>与相关对口学院联系是否能算作<strong>形策分</strong>，尤其是计院——可能需要学工部老师的关系</li>
+<li>拉动自己的亲朋好友上场</li>
+<li>思考一些预热方式，让更多的人知道。有时候并不是大家不愿意来，只是大家不知道。</li>
+</ul>
+<h3 id="_16">线下组</h3>
+<h4 id="_17">任务</h4>
+<p>安排线下活动的内容，准备相关物资，并在当时确保线下活动有序进行。</p>
+<h4 id="_18">子活动范例</h4>
+<p>子活动请确保自己的活动设计具有足够的趣味，且逻辑完善严密，可以有序的执行。</p>
+<p>子活动的主题其实不必有太大限制，为了一个子活动安排一个主题也是可以的，且各个主题不相关强行解释也是可以的。关键是要让子活动真正有意义，不要成为一个部门的自嗨，要真正让学生们有所收获，或提升贵潮的形象。以下给出范例，并且列上相应的负责人方便回顾：</p>
+<h5 id="2019">2019年：我的原型设计</h5>
+<p>这是产品味比较浓厚的一个项目，大意就是把产品这个工作进行一定程度的科普。</p>
+<p><strong>负责人：</strong>屈臣氏，剩女</p>
+<p><strong>活动形式：</strong>我们将淘宝，支付宝，浙大体艺等大家熟悉的App做成KT板，对相应的模块进行裁剪，背面贴上吸铁石于白板上，这时参与者可以根据自己的喜好改装，拼装。同时可以分享一下设计思路与对这个app不满的地方是</p>
+<p><strong>活动评价：</strong>我一开始还觉得这个挺无聊的（剩女），出人意料的是参与者们似乎对这个还挺感兴趣的，所以说可以找几个非产品人评估一下什么的，以免产品人作为一个信息茧房对活动的价值有所误判。</p>
+<h5 id="20182019vr">2018/2019年：VR节奏光剑体验</h5>
+<p><strong>负责人：</strong>抽搐鸨  /  春丽，剩女</p>
+<p><strong>活动形式：</strong>800块三天租一台电视，自己的音响，租的PSVR。让参与者体验VR游戏，并且通过大屏和音响，外面的人也可以看到并听到。</p>
+<p><strong>活动评价：</strong>王牌项目，不说了，排队没停过。</p>
+<h5 id="2018ipad">2018年：Ipad × 无人机</h5>
+<p><strong>负责人：</strong>抽搐鸨 </p>
+<p><strong>活动形式：</strong>和Apple专卖店合作，白嫖了一些Ipad，可以用Ipad操控无人机。</p>
+<p><strong>活动评价：</strong>（剩女）根据抽搐鸨说，反正周围居民的小孩很喜欢。</p>
+<h5 id="2019_1">2019年：故事续写</h5>
+<p><strong>负责人：</strong>仙贝，剩女</p>
+<p><strong>活动形式：</strong>每人一句在白板上续写故事</p>
+<p><strong>活动评价：</strong>有人特别认真的在写，也有人特别水。但由于这个形式，水的人会带来不好的体验。且由于大家字比较丑，拍出来的效果不是很好看，大家也不是很感兴趣。</p>
+<h5 id="20193d">2019年：3D打印机展示</h5>
+<p><strong>负责人：</strong>抽搐鸨/剩女</p>
+<p><strong>活动形式：</strong>向有3D打印机的社团借了一个拉过来展示。但是由于没和对方做好内容沟通，且没想到3D打印机打印的那么慢，仅仅是开机展示，没有很好的设置互动。</p>
+<p><strong>活动评价：</strong>装饰品，看着高级。</p>
+<h4 id="_19">子活动设想</h4>
+<p>接下来是一些设想过但未曾实现的活动</p>
+<h5 id="_20">健身环体验</h5>
+<p><strong>目的与意义：</strong>游戏 × 健身</p>
+<p><strong>活动形式：</strong>白嫖/租Switch和健身环，租显示屏，自己的音响，体验</p>
+<h5 id="_21">密码学小游戏</h5>
+<p><strong>目的与意义：</strong>让大家了解到一些密码在生活中应用的方式，拓宽知识面。</p>
+<p><strong>活动形式：</strong>将一些密码学设计成解密小游戏，可参考的知识点如下</p>
+<ul>
+<li>三次握手</li>
+<li>拜占庭将军问题</li>
+<li>凯撒密码，栅栏密码等简单密码</li>
+<li>二战德国Enigma加密机</li>
+<li>RSA对称加密</li>
+<li>报文摘要</li>
+</ul>
+<p>感兴趣请选修：计算机网络，（白洪欢）密码学，</p>
+<h4 id="_22">注意事项</h4>
+<h4 id="_23">具体要求</h4>
+<p>一个成功的线下需要有以下要素</p>
+<ul>
+<li>场地布置</li>
+<li>提前借到文广B区</li>
+<li>合理规划签名墙等各活动的设施</li>
+<li>与学工部老师做好足够的沟通，以及各协办方。</li>
+<li>由于线下活动可能话题敏感，不确定性高。对于这类活动务必确认后开工，防止被否做无用功</li>
+<li>优秀的宣传品</li>
+<li>线下主海报，易拉宝</li>
+<li>传单，刷楼用具（如2019年鸡精提出的门把手宣传品）</li>
+<li>（可选）活动地图</li>
+<li>其他你想得到的</li>
+<li>合格的推文流（可选</li>
+<li>线下预热推文</li>
+<li>线下活动推文</li>
+<li>线下活动总结（进行中，既是总结也是吸引</li>
+<li>线下活动新闻稿</li>
+<li>有吸引力的奖品</li>
+<li>提前做好预算与规划，有合理的发放奖品流程</li>
+<li>各层级的奖品：<ul>
+<li>一等奖二等奖三等奖云云</li>
+<li>纪念品，周边等</li>
+</ul>
+</li>
+<li>能打能抗的活动</li>
+<li>相关物料到位</li>
+<li>有趣的活动流程<ul>
+<li>如节奏光剑的计分使用荧光板展现，吸引大家前来刷榜</li>
+<li>活动本身也需要有一定的意义，不能为了娱乐而娱乐</li>
+<li>最好的话可以在其中输出求是潮的一些内容，提升求是潮的形象</li>
+</ul>
+</li>
+<li>工作人员的合理安排</li>
+<li>前期的工作人员培训</li>
+<li>合理的排班与分工，保证整个流程走通</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 主页" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              主页
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ideology/mqz-1/" class="md-footer__link md-footer__link--next" aria-label="下一页: 给中国新媒体的八条标准" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              给中国新媒体的八条标准
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Ralvine
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>
