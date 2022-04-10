@@ -2129,41 +2129,30 @@
 </td></tr></table>
 <h2 id="_12">复杂度</h2>
 <h3 id="big-o">big O</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mi">1000</span><span class="n">N</span><span class="o">=</span><span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="p">(</span><span class="n">logN</span><span class="p">)</span><span class="o">^</span><span class="n">k</span><span class="o">=</span><span class="n">O</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"> </span>
-<span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">logN</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NlogN</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="o">^</span><span class="mi">2</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
+<p><span class="arithmatex">\(1000N=O(N^2); (logN)^k=O(N);\\\)</span>
+<span class="arithmatex">\(1 &lt; logN &lt; N &lt; NlogN &lt; N^2\)</span></p>
 <h3 id="_13">时间复杂度</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">for循环</span><span class="err">｜</span><span class="n">内语句</span><span class="o">*</span><span class="n">迭代次数</span><span class="err">；</span><span class="n">嵌套循环</span><span class="w"></span>
-<span class="n">顺序语句</span><span class="err">｜</span><span class="n">求和</span><span class="err">，</span><span class="n">取Max</span><span class="err">；</span><span class="n">判定语句</span><span class="w"></span>
-<span class="n">NlogN</span><span class="o">|</span><span class="n">最大子序列问题</span><span class="w"> </span><span class="n">一次N遍历</span><span class="o">&amp;</span><span class="n">一次二分查找</span><span class="w"></span>
-<span class="n">logN</span><span class="err">｜</span><span class="n">二分搜索</span><span class="err">，</span><span class="n">欧几里得</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
+<blockquote>
+<p>for循环｜内语句*迭代次数；嵌套循环
+顺序语句｜求和，取Max；判定语句
+NlogN|最大子序列问题 一次N遍历&amp;一次二分查找
+logN｜二分搜索，欧几里得</p>
+</blockquote>
 <h3 id="_14">主定理 ★</h3>
 <p><img alt="image-20220102105905885" src="/Users/ralvine/Library/Application Support/typora-user-images/image-20220102105905885.png" /></p>
 <p><strong>归纳法证明：</strong> （例）</p>
 <p><img alt="image-20220104172830911" src="/Users/ralvine/Library/Application Support/typora-user-images/image-20220104172830911.png" /></p>
-<p><strong>一般性证明：</strong>构造树，depth=log(b,n)，widget=a^(log(b,n))=n^(log(b,a))</p>
-<p><em>实例：二分查找</em></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>T(n) = T(n/2) + O(1)  
-T(n/2) = T(n/4) + O(1)    
-  ...
-T(2) = T(1) + O(1)     
-T(1) = O(1)
-a=1,b=2,k=0代入得O(logN);
-</code></pre></div>
-</td></tr></table>
-<p>另可直接证，由于为1/2,1/4...1/n,尾项2^k项为n，故共logn项，T(n)=logn*o(1)=logn</p>
+<p><strong>一般性证明：</strong>构造树，<span class="arithmatex">\(depth=log(b,n)，widget=a^{(log(b,n))}=n^{(log(b,a))}\)</span></p>
+<p><em>实例：二分查找</em>
+$$
+T(n) = T(n/2) + O(1)  \
+T(n/2) = T(n/4) + O(1)  \<br />
+  ...\
+T(2) = T(1) + O(1)     \
+T(1) = O(1)\
+a=1,b=2,k=0\代入得O(logN);
+$$
+另可直接证，由于为1/2,1/4...1/n,尾项2^k项为n，故共logn项，T(n)=logn*o(1)=logn</p>
 <h2 id="vector-list-stack-queues">Vector &amp; List &amp; Stack &amp; Queues</h2>
 <h3 id="iterator">iterator</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2248,15 +2237,10 @@ List|链表 Single/Double-Linked-List <strong>双链表</strong> 表头、尾、
 <p><code>pop() push() size() swap() empty();</code>Stack:LIFO <code>top();</code> Queue:FIFO <code>front() back();</code></p>
 <h4 id="stack">Stack 计算器</h4>
 <p>前缀/后缀。<strong>中缀转后缀：</strong><code>A+B*(C-D)-E/F</code>转为<code>ABCD−∗+EF/−</code></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">优先级设置</span><span class="w"> </span><span class="err">‘</span><span class="o">*</span><span class="err">’</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="o">/</span><span class="err">’</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="err">‘</span><span class="o">+</span><span class="err">’</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="o">-</span><span class="err">’</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nl">style1</span><span class="p">:</span><span class="err">‘</span><span class="p">(</span><span class="err">’</span><span class="n">优先级最高</span><span class="err">，</span><span class="n">如直接读入</span><span class="err">；</span><span class="n">推入操作符时不弹</span><span class="w"></span>
-<span class="w">  </span><span class="nl">style2</span><span class="p">:</span><span class="err">‘</span><span class="p">(</span><span class="err">’</span><span class="n">优先级最低</span><span class="err">，</span><span class="n">强制直接读入</span><span class="w"></span>
-<span class="n">数字直接放到</span><span class="p">[</span><span class="n">输出列</span><span class="p">]</span><span class="err">，</span><span class="n">右括号直接弹到左括号止</span><span class="err">；</span><span class="n">操作符</span><span class="err">：</span><span class="n">栈弹出直到遇到比自己优先级低的操作符再入栈</span><span class="err">。</span><span class="n">计算</span><span class="err">：</span><span class="n">顺序读取</span><span class="err">，</span><span class="n">数字入栈</span><span class="err">，</span><span class="n">符号弹出两数字运算</span><span class="err">，</span><span class="n">结果入栈</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
+<p>优先级设置 ‘*’ = ‘/’ &gt; ‘+’ = ‘-’ &gt;
+  style1:‘(’优先级最高，如直接读入；推入操作符时不弹
+  style2:‘(’优先级最低，强制直接读入
+数字直接放到[输出列]，右括号直接弹到左括号止；操作符：栈弹出直到遇到比自己优先级低的操作符再入栈。计算：顺序读取，数字入栈，符号弹出两数字运算，结果入栈</p>
 <h2 id="trees">Trees</h2>
 <p>Binary Tree 二叉树平均深度O(√N)，表达式树应用；</p>
 <h3 id="binary-search-tree">Binary Search Tree</h3>
