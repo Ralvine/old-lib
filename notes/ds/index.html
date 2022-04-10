@@ -1,0 +1,2504 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>数据结构与算法 - Mind Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Mind Library" class="md-header__button md-logo" aria-label="Mind Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mind Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数据结构与算法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="切换夜间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换夜间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="切换日间模式"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="切换日间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.md" class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ideology/mqz-1/" class="md-tabs__link">
+        文献收录
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ideology/mqz-2/" class="md-tabs__link">
+        阅览手摘
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        学习笔记
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://ralvine.github.io/about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mind Library" class="md-nav__button md-logo" aria-label="Mind Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mind Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          文献收录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文献收录" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文献收录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          意识形态
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="意识形态" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          意识形态
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-1/" class="md-nav__link">
+        给中国新媒体的八条标准
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-2/" class="md-nav__link">
+        民族主义与左派联姻下的当代中国
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/slz-1/" class="md-nav__link">
+        阿拉伯之春在欧洲
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/fsz-1/" class="md-nav__link">
+        全输-全赢博弈与当代中国政治的变迁与改革
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-3/" class="md-nav__link">
+        寻找初心，新青年的“6+1”攻略
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          文化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文化" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          文化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../culture/ygz-1/" class="md-nav__link">
+        中国文字的常态与变态
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          历史
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="历史" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          历史
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/united-1/" class="md-nav__link">
+        我在中央统战部做知识分子工作的往事
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          阅览手摘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="阅览手摘" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          阅览手摘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-2/" class="md-nav__link">
+        影片
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-2/" class="md-nav__link">
+        书评
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          学习笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          数据结构与算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        数据结构与算法
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类模板及语法基础
+  </a>
+  
+    <nav class="md-nav" aria-label="类模板及语法基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    动态内存与释放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关键字修饰符
+  </a>
+  
+    <nav class="md-nav" aria-label="关键字修饰符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    Static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    *this
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit" class="md-nav__link">
+    Explicit 显式转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    宏定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    传递 引用
+  </a>
+  
+    <nav class="md-nav" aria-label="传递 引用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    形参的值传递 指针传递 引用传递
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    左值 右值引用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmove" class="md-nav__link">
+    std::move
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-struct" class="md-nav__link">
+    Class &amp; Struct 封装
+  </a>
+  
+    <nav class="md-nav" aria-label="Class &amp; Struct 封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    复制构造函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    函数化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct 定义传入参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    Operator 重载运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-template-library" class="md-nav__link">
+    Standard Template Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复杂度
+  </a>
+  
+    <nav class="md-nav" aria-label="复杂度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    big O
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    时间复杂度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    主定理 ★
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-list-stack-queues" class="md-nav__link">
+    Vector &amp; List &amp; Stack &amp; Queues
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector &amp; List &amp; Stack &amp; Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterator" class="md-nav__link">
+    iterator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-list" class="md-nav__link">
+    Vector &amp; List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-queue" class="md-nav__link">
+    Stack &amp; Queue
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack &amp; Queue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    Stack 计算器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    Trees
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-search-tree" class="md-nav__link">
+    Binary Search Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Search Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    构建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct_1" class="md-nav__link">
+    关于 struct 构造
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function" class="md-nav__link">
+    关于 function 参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    时间分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-tree" class="md-nav__link">
+    Balance Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avl-trees" class="md-nav__link">
+    AVL Trees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay-trees" class="md-nav__link">
+    Splay Trees*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traversals" class="md-nav__link">
+    Traversals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-trees" class="md-nav__link">
+    B Trees*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets-maps" class="md-nav__link">
+    Sets &amp; Maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    开放寻址法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    再散列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    可扩散列*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-heaps" class="md-nav__link">
+    Priority Queues &amp; Heaps
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Queues &amp; Heaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-heap" class="md-nav__link">
+    Binary Heap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-priority-queues" class="md-nav__link">
+    Applications of Priority Queues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    Insertion Sort*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-sort" class="md-nav__link">
+    Quick Sort
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pivot" class="md-nav__link">
+    Pivot策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-linear-expected-time-algorithm-for-selection" class="md-nav__link">
+    A Linear-Expected-Time Algorithm for Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-time-sorts-bucket-sort-and-radix-sort" class="md-nav__link">
+    Linear-Time Sorts: Bucket Sort and Radix Sort 复杂度分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    计（基）数排序——非比较算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    归并排序/堆排序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图论算法
+  </a>
+  
+    <nav class="md-nav" aria-label="图论算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    拓扑排序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras" class="md-nav__link">
+    Dijkstras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    最坏可能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    可对负边权使用的算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    最小生成树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    深度优先 广度优先
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    算法设计补充
+  </a>
+  
+    <nav class="md-nav" aria-label="算法设计补充">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    贪心算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    分治算法 Divide-and-Conquer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    Dynamic Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    回溯法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pde/" class="md-nav__link">
+        偏微分方程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-2/" class="md-nav__link">
+        计算机
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ideology/mqz-2/" class="md-nav__link">
+        经管
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ralvine.github.io/about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类模板及语法基础
+  </a>
+  
+    <nav class="md-nav" aria-label="类模板及语法基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    动态内存与释放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关键字修饰符
+  </a>
+  
+    <nav class="md-nav" aria-label="关键字修饰符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    Static
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    *this
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit" class="md-nav__link">
+    Explicit 显式转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    宏定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    传递 引用
+  </a>
+  
+    <nav class="md-nav" aria-label="传递 引用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    形参的值传递 指针传递 引用传递
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    左值 右值引用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdmove" class="md-nav__link">
+    std::move
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-struct" class="md-nav__link">
+    Class &amp; Struct 封装
+  </a>
+  
+    <nav class="md-nav" aria-label="Class &amp; Struct 封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    复制构造函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    函数化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct 定义传入参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    Operator 重载运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-template-library" class="md-nav__link">
+    Standard Template Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复杂度
+  </a>
+  
+    <nav class="md-nav" aria-label="复杂度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-o" class="md-nav__link">
+    big O
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    时间复杂度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    主定理 ★
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-list-stack-queues" class="md-nav__link">
+    Vector &amp; List &amp; Stack &amp; Queues
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector &amp; List &amp; Stack &amp; Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterator" class="md-nav__link">
+    iterator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-list" class="md-nav__link">
+    Vector &amp; List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-queue" class="md-nav__link">
+    Stack &amp; Queue
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack &amp; Queue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    Stack 计算器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    Trees
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-search-tree" class="md-nav__link">
+    Binary Search Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Search Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    构建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct_1" class="md-nav__link">
+    关于 struct 构造
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function" class="md-nav__link">
+    关于 function 参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    时间分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-tree" class="md-nav__link">
+    Balance Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avl-trees" class="md-nav__link">
+    AVL Trees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay-trees" class="md-nav__link">
+    Splay Trees*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traversals" class="md-nav__link">
+    Traversals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-trees" class="md-nav__link">
+    B Trees*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets-maps" class="md-nav__link">
+    Sets &amp; Maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    开放寻址法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    再散列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    可扩散列*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-heaps" class="md-nav__link">
+    Priority Queues &amp; Heaps
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Queues &amp; Heaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-heap" class="md-nav__link">
+    Binary Heap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-priority-queues" class="md-nav__link">
+    Applications of Priority Queues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    Insertion Sort*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-sort" class="md-nav__link">
+    Quick Sort
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pivot" class="md-nav__link">
+    Pivot策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-linear-expected-time-algorithm-for-selection" class="md-nav__link">
+    A Linear-Expected-Time Algorithm for Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-time-sorts-bucket-sort-and-radix-sort" class="md-nav__link">
+    Linear-Time Sorts: Bucket Sort and Radix Sort 复杂度分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    计（基）数排序——非比较算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    归并排序/堆排序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    图论算法
+  </a>
+  
+    <nav class="md-nav" aria-label="图论算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    拓扑排序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras" class="md-nav__link">
+    Dijkstras
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    最坏可能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    可对负边权使用的算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    最小生成树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    深度优先 广度优先
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    算法设计补充
+  </a>
+  
+    <nav class="md-nav" aria-label="算法设计补充">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    贪心算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    分治算法 Divide-and-Conquer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    Dynamic Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    回溯法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">数据结构与算法</h1>
+<blockquote>
+<p>Ch3-Lists&amp;Stacks&amp;Queues:1
+Ch4-Trees:2
+Ch5-Hashing:1
+Ch6-PriorityQueues&amp;Heaps:1
+Ch7-Sorting:1.5
+Ch9-GraphAlgorithms:1.5
+*主定理</p>
+</blockquote>
+<h2 id="_2">类模板及语法基础</h2>
+<p><em>Point:关键字</em></p>
+<h3 id="_3">动态内存与释放</h3>
+<pre><code class="language-c++">char* name; delete [] name;
+Birds() {name=new char[256]}
+</code></pre>
+<p>利用指针实现动态内存分配。同值对象指向相同address</p>
+<p>Shell命令查看内存泄漏状况<code>valgrind filename</code></p>
+<p>释放内存：及时delete变量。由于为指针，要防止指向新地址时原内存未被释放。</p>
+<h3 id="template">template</h3>
+<p>编译时自动填充typename
+在类外撰写类成员函数时需要添加
+可指定T的具体类型</p>
+<pre><code class="language-c++">template&lt;typename T&gt;
+Array&lt;T&gt;::FunctionName(const Array&lt;T&gt;&amp; _obj) {}
+</code></pre>
+<h3 id="_4">关键字修饰符</h3>
+<h4 id="const">const</h4>
+<p>对成员函数：修饰非静态数据，只读化。应尽可能将该成员函数声明为const 成员函数，除非成员函数需要修改数据成员。const可访问非常量数据，反之不可。指针数据可以被const 函数修改。
+<code>Class:: func() const {}</code></p>
+<p>对形参：指针传递，禁止修改指针指向地址内存数据；值传递不需要const保护。</p>
+<p><code>void copyMemory(const T* _s,T* _d,int _n);</code></p>
+<h4 id="static">Static</h4>
+<p>静态变量，延长生命周期又相较全局变量保留了一定的访问范围。需要一个数据对象为整个类而非某个对象服务,同时又力求不破坏类的封装性,即要求此成员隐藏在类的内部时使用。</p>
+<h4 id="this">*this</h4>
+<p>指向obj自身的指针</p>
+<h4 id="explicit">Explicit 显式转换</h4>
+<p>explicit 对单参数构造函数限制隐式转换
+防止编译器进行类型等方式的强制转换。</p>
+<h3 id="_5">宏定义</h3>
+<p>用于简化重复语句<code>#define TEMP template&lt;typename T&gt;</code></p>
+<p>编译处理</p>
+<pre><code class="language-c++">#ifndef xxx
+#define xxx
+#else
+#endif
+</code></pre>
+<h3 id="_6">传递 引用</h3>
+<h4 id="_7">形参的值传递 指针传递 引用传递</h4>
+<p>默认为值传递，开辟新函数，储存实参数据；指针实质存在一层中介地址，引用传递直接对传入对象进行修改；*&amp;obj适用于struct对象，对其属性变量进行修改</p>
+<p>（1）T<em> a： 传递实参指针地址，及最终指向数据地址，但可以利用</em>a修改地址内存数据
+（2）T&amp; a：左值引用，实参的别名</p>
+<h4 id="_8">左值 右值引用</h4>
+<p>右值引用&amp;&amp;：防止传递给形参T&amp; a的是常量（此时函数无法修改a）</p>
+<p><strong>看能不能对表达式取地址，如果能，则为左值，否则为右值</strong></p>
+<pre><code class="language-c++">int a = 10;
+const int c = 10;
+int &amp;d = c; // error.
+int &amp;&amp;d = 10;
+</code></pre>
+<p><strong>约定</strong> rhs：引用；lhs：赋值</p>
+<h4 id="stdmove">std::move</h4>
+<p>强制将左值转换为右值引用，如push_back避免开辟新内存</p>
+<pre><code class="language-c++">AvlNode(const Comparable &amp; ele, AvlNode *lt, AvlNode *rt, int h = 0): element{ele}, left{lt}, right{rt}, height{h} {}
+AvlNode(Comparable &amp;&amp; ele, AvlNode *lt, AvlNode *rt, int h = 0): element{std::move(ele)}, left{lt}, right{rt}, height{h} {} //参数无地址，临时ele=参数
+</code></pre>
+<h3 id="class-struct">Class &amp; Struct 封装</h3>
+<p>外部只提供相应功能的接口，不允许直接对底层对象进行修改。</p>
+<h4 id="_9">复制构造函数</h4>
+<p>将b中成员属性复制到c： <code>Birds c(b);</code>
+类中处理：定义拷贝函数；否则：缺省。
+需要开辟新的动态内存</p>
+<pre><code class="language-c++">Birds(Birds _obj) {
+name=new char [256]; 
+for循环迭代载入name[i]=_obj.name[i];
+}
+</code></pre>
+<h4 id="_10">函数化</h4>
+<p>如复制构造函数中的copyMemory，便于多核并行运算。</p>
+<h4 id="struct">struct 定义传入参数</h4>
+<p>使得struct能够直接在定义时传入相应参数</p>
+<p><code>BinaryNode(const Comparable&amp; theElement, BinaryNode *lt, BinaryNode *rt): element(theElement),left(lt),right(rt) {}</code></p>
+<h4 id="operator">Operator 重载运算符</h4>
+<pre><code>const Array&amp; operator=(const Array&amp; _obj)
+</code></pre>
+<h4 id="_11">注释</h4>
+<p>doxymacs/doxygen格式的注释：
+可以通过命令提取所有相应注释以html方式直观显示。</p>
+<h3 id="standard-template-library">Standard Template Library</h3>
+<pre><code class="language-c++">// get random number.
+srand((unsigned)time(nullptr)); // 随机种子
+a=rand()%10;
+</code></pre>
+<pre><code class="language-c++">#include &lt;algorithm&gt;
+abs();min();max();swap(a,b);
+#include &lt;cmath&gt;
+sqrt();sin();cos();tan();pow();
+#include &lt;ctime&gt;
+clock_t start = clock();
+</code></pre>
+<h2 id="_12">复杂度</h2>
+<h3 id="big-o">big O</h3>
+<pre><code class="language-c++">1000N=O(N^2); (logN)^k=O(N); 
+1 &lt; logN &lt; N &lt; NlogN &lt; N^2
+</code></pre>
+<h3 id="_13">时间复杂度</h3>
+<pre><code class="language-c++">for循环｜内语句*迭代次数；嵌套循环
+顺序语句｜求和，取Max；判定语句
+NlogN|最大子序列问题 一次N遍历&amp;一次二分查找
+logN｜二分搜索，欧几里得
+</code></pre>
+<h3 id="_14">主定理 ★</h3>
+<p><img alt="image-20220102105905885" src="/Users/ralvine/Library/Application Support/typora-user-images/image-20220102105905885.png" /></p>
+<p><strong>归纳法证明：</strong> （例）</p>
+<p><img alt="image-20220104172830911" src="/Users/ralvine/Library/Application Support/typora-user-images/image-20220104172830911.png" /></p>
+<p><strong>一般性证明：</strong>构造树，depth=log(b,n)，widget=a^(log(b,n))=n^(log(b,a))</p>
+<p><em>实例：二分查找</em></p>
+<pre><code>T(n) = T(n/2) + O(1)  
+T(n/2) = T(n/4) + O(1)    
+  ...
+T(2) = T(1) + O(1)     
+T(1) = O(1)
+a=1,b=2,k=0代入得O(logN);
+</code></pre>
+<p>另可直接证，由于为1/2,1/4...1/n,尾项2^k项为n，故共logn项，T(n)=logn*o(1)=logn</p>
+<h2 id="vector-list-stack-queues">Vector &amp; List &amp; Stack &amp; Queues</h2>
+<h3 id="iterator">iterator</h3>
+<pre><code class="language-c++">std::vector&lt;int&gt; iterator a=A.begin();
+i = find(v.begin(), v.end(), 1);
+</code></pre>
+<h3 id="vector-list">Vector &amp; List</h3>
+<p>Array|经典数组
+Vector|批量分配内存的数组，空间不够时再申请新的内存；模板化<T>；允许拷贝赋值
+List|链表 Single/Double-Linked-List <strong>双链表</strong> 表头、尾、哨兵结点</p>
+<pre><code class="language-c++">vector&lt;int&gt; a(10,1); //10个初值为1的元素
+vector&lt;int&gt; a(b.begin(),b.begin+3);
+
+//共有
+a.clear();a.empty();
+a.front();a.back();
+a.push_back(1);a.size();
+a.resize(10,2);//现有元素数目调整,多删少补,未给定参数2则随机
+
+// Vector
+a[i];a.insert(a.begin()+1,5);
+a.pop_back();a.swap(b);
+a.reserve(100);//容量
+
+// List
+a.push_front(val);a.insert(single_val);
+a.remove(val);a.remove_if(condition);a.unique();//去重
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>Access</th>
+<th>Insert</th>
+<th>Delete</th>
+<th>Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array/Vector</td>
+<td>1</td>
+<td>n</td>
+<td>n</td>
+<td>n</td>
+</tr>
+<tr>
+<td>Single-linked-List</td>
+<td>n</td>
+<td>1</td>
+<td>1</td>
+<td>n</td>
+</tr>
+<tr>
+<td>Double-linked-List</td>
+<td>n</td>
+<td>1</td>
+<td>1</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stack-queue">Stack &amp; Queue</h3>
+<p><code>pop() push() size() swap() empty();</code>Stack:LIFO <code>top();</code> Queue:FIFO <code>front() back();</code></p>
+<h4 id="stack">Stack 计算器</h4>
+<p>前缀/后缀。<strong>中缀转后缀：</strong><code>A+B*(C-D)-E/F</code>转为<code>ABCD−∗+EF/−</code></p>
+<pre><code class="language-c++">优先级设置 ‘*’ = ‘/’ &gt; ‘+’ = ‘-’ &gt;
+  style1:‘(’优先级最高，如直接读入；推入操作符时不弹
+  style2:‘(’优先级最低，强制直接读入
+数字直接放到[输出列]，右括号直接弹到左括号止；操作符：栈弹出直到遇到比自己优先级低的操作符再入栈。计算：顺序读取，数字入栈，符号弹出两数字运算，结果入栈
+</code></pre>
+<h2 id="trees">Trees</h2>
+<p>Binary Tree 二叉树平均深度O(√N)，表达式树应用；</p>
+<h3 id="binary-search-tree">Binary Search Tree</h3>
+<p>左小右大；平均深度O(logN)最坏深度O(N-1)</p>
+<h4 id="_15"><strong>构建</strong></h4>
+<p>contains｜findMin(Max)｜insert｜～:makeEmpty递归</p>
+<p>copy| clone，递归return new node; 重载运算符：this!=&amp;rhs则makeEmpty再clone rhs.root，最终return *this</p>
+<p>remove|(*&amp;t)t为结点地址；空,return;t&lt;&gt;x判断;t=x.</p>
+<p>双子:t-&gt;ele=findmax(t-&gt;right)-&gt;ele,remove(t-&gt;ele;t-&gt;right); // 右子找min代入t,删除该min</p>
+<p>单子/无子：T*oldNode=t,另引入的参数t=t-&gt;left/right相当于改结点地址为t左/右子，再删oldNode即删了原结点.</p>
+<pre><code class="language-c++">// findmin: 递归或while 注意空树直接返回nullptr
+BinaryNode * findMin( BinaryNode *t ) const {
+  if( t == nullptr )
+    return nullptr;
+  if( t-&gt;left == nullptr )
+    return t;
+  return findMin( t-&gt;left );
+}
+// insert
+1.if t==nullptr:new node{x,nullptr,nullptr};
+2.else compare x,t-&gt;ele,递归
+3.balance and update the height(max(subtree)+1).
+</code></pre>
+<h4 id="struct_1">关于 struct 构造</h4>
+<p>BinaryNode置于private；针对struct的操作也位于private部分</p>
+<p>外部操作→public函数→private函数</p>
+<h4 id="function">关于 function 参数</h4>
+<p>对Struct BinaryNode，由于其element为变量，left/right为指针，fuction引用时应采用(BinaryNode * &amp; t)，引用Node地址</p>
+<h4 id="_16">时间分析</h4>
+<p>内部路径长｜所有结点的深度和；递推关系、秩，D(N)=D(i)+D(N-i-1)+N-1 =&gt; O(NlogN),average</p>
+<p>任意结点预期深度logN；交替insert/remove O(N^2)，期望深度O(√N)</p>
+<h3 id="balance-tree">Balance Tree</h3>
+<pre><code class="language-c++">/// Height 处理
+// Binary Tree
+int height( BinaryNode *t ) { 
+  if( t == nullptr )
+    return -1;
+  else
+    return 1 + max(height(t-&gt;left), height(t-&gt;right));
+}
+// AVL Tree: Struct AvlNode has added the val 'height'.
+int height( AvlNode *t ) const {
+  return t == nullptr ? -1 : t-&gt;height;
+}
+</code></pre>
+<h4 id="avl-trees">AVL Trees</h4>
+<p>每个结点的左子树和右子树高度最多差1（空树为-1）</p>
+<p><strong>Rotation的具体实现</strong></p>
+<table>
+<thead>
+<tr>
+<th>插入方式</th>
+<th>描述</th>
+<th>旋转方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LL</td>
+<td>在a的<strong>左子树</strong>根节点的<strong>左子树</strong>上插入节点而破坏平衡</td>
+<td>右旋转</td>
+</tr>
+<tr>
+<td>RR</td>
+<td>在a的<strong>右子树</strong>根节点的<strong>右子树</strong>上插入节点而破坏平衡</td>
+<td>左旋转</td>
+</tr>
+<tr>
+<td>LR</td>
+<td>在a的<strong>左子树</strong>根节点的<strong>右子树</strong>上插入节点而破坏平衡</td>
+<td>先左旋后右旋</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>在a的<strong>右子树</strong>根节点的<strong>左子树</strong>上插入节点而破坏平衡</td>
+<td>先右旋后左旋</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-c++">// insert. 伪代码
+x&lt;t-&gt;ele:左插入，insert(x,t-&gt;left),此时判定
+  if balance condition:height of left-right&gt;1;
+    then if x&lt;t-&gt;left-&gt;ele 即LL，对t调用右旋 // 其余同理
+// right rotation. (for LL-insert style)
+void rotateWithLeftChild( AvlNode * &amp; k2 ) {
+  AvlNode *k1 = k2-&gt;left;
+  k2-&gt;left = k1-&gt;right;
+  k1-&gt;right = k2;
+  // after rotation , update the height.
+  k2-&gt;height = max( height( k2-&gt;left ), height( k2-&gt;right ) ) + 1;
+  k1-&gt;height = max( height( k1-&gt;left ), k2-&gt;height ) + 1;
+  k2 = k1;
+}
+// LR-insert.
+void doubleWithLeftChild( AvlNode * &amp; k3 ) {
+  rotateWithRightChild( k3-&gt;left );
+  rotateWithLeftChild( k3 );
+}
+</code></pre>
+<p><strong>时间复杂度分析</strong>:计算高度O(logN)；保证查询O(logN)避免Binary Tree最坏的N；但由于旋转存在，操作效率低，特别是remove时可能需要一直旋转到根；额外封装，繁琐</p>
+<p>*另一种写法：独立的balance操作</p>
+<pre><code class="language-c++">// at the end of each insert or remove operation, you need to do &quot;balance(t)&quot;
+static const int ALLOWED_IMBALANCE = 1;
+void balance( AvlNode * &amp; t ) { 
+  if( t == nullptr ) 
+    return;
+  if( height( t-&gt;left ) - height( t-&gt;right ) &gt; ALLOWED_IMBALANCE )
+    if( height( t-&gt;left-&gt;left ) &gt;= height( t-&gt;left-&gt;right ) ) 
+      rotateWithLeftChild( t ); 
+    else 
+      doubleWithLeftChild( t );
+  else if( height( t-&gt;right ) - height( t-&gt;left ) &gt; ALLOWED_IMBALANCE ) 
+    if( height( t-&gt;right-&gt;right ) &gt;= height( t-&gt;right-&gt;left ) ) 
+      rotateWithRightChild( t ); 
+    else
+      doubleWithRightChild( t );
+  t-&gt;height = max( height( t-&gt;left ), height( t-&gt;right ) ) + 1; 
+}
+</code></pre>
+<h4 id="splay-trees">Splay Trees*</h4>
+<p>保证从空树开始任意连续M次操作最多花费O(MlogN)的时间</p>
+<h3 id="traversals">Traversals</h3>
+<pre><code class="language-c++">// 前序
+文件路径展开
+// 中序 O(N)
+if( t != nullptr ) { 
+    printTree( t-&gt;left, out );
+    out &lt;&lt; t-&gt;element &lt;&lt; endl; 
+    printTree( t-&gt;right, out ); 
+}
+// 后序 O(N)
+高度计算
+// 层序
+using &lt;queue&gt;
+</code></pre>
+<h3 id="b-trees">B Trees*</h3>
+<h3 id="sets-maps">Sets &amp; Maps</h3>
+<p>Sets｜排序、去重</p>
+<pre><code class="language-c++">set&lt;int&gt; a;
+a.find(val);//logN
+a.erase(val);a.swap(b);a.clear();
+</code></pre>
+<p>Maps｜key-value(&gt;=1)</p>
+<pre><code class="language-c++">map&lt;int&gt; a;
+map&lt;int&gt;::iterator b; // key:b-&gt;first; value:b-&gt;second....
+</code></pre>
+<h2 id="hashing">Hashing</h2>
+<p>散列表；[insert/search/delete]average:O(1)；Key -&gt; Table；素数 TableSize；collision</p>
+<h3 id="analysis">Analysis</h3>
+<p><strong>负数补偿？</strong>value&lt;0，then+tableSize</p>
+<p><strong>均匀分配键：</strong>单元数目有限，键数实际上无穷；习惯：0～tableSize-1</p>
+<p>装填因子；分离链接法（缺点：内存分配耗时）；除了链表，也可用二叉树/新散列表</p>
+<h3 id="_17">开放寻址法</h3>
+<p>冲突解决函数，𝝀&lt;0.5聚集效应,f(i)为冲突点与探查点的距离</p>
+<p>线性探测:f(i)=i；一次聚集-占据单元形成区块</p>
+<p>平方探测:f(i)=i^2<em>保证表的大小是素数，否则表被填满一半就找不到空单元了</em>；二次聚集</p>
+<p>双散列:f(i)=i*hash(x),结果不可以为0；example，hash(x)=R-(xmodR)</p>
+<h3 id="_18">再散列</h3>
+<p>O(N);一半/插满的策略;</p>
+<p>途中策略：某一装填因子</p>
+<h3 id="_19">可扩散列*</h3>
+<h2 id="priority-queues-heaps">Priority Queues &amp; Heaps</h2>
+<h3 id="binary-heap">Binary Heap</h3>
+<p>完全二叉树；最小堆、最大堆；数组存储i,2i,2i+1；查找O(N)；堆序性质</p>
+<p><strong>为何选用Heap？</strong>Min/Max:O(1)</p>
+<pre><code class="language-c++">void insert( const Comparable &amp; x ) {
+  // check size.
+  if( currentSize == array.size( ) - 1 ) 
+    array.resize( array.size( ) * 2 );
+  // Percolate up 
+  int hole = ++currentSize;
+  Comparable copy = x;
+  array[ 0 ] = std::move( copy );
+  for( ; x &lt; array[ hole / 2 ]; hole /= 2 )
+    array[ hole ] = std::move( array[ hole / 2 ] ); // 规避大量交换
+  array[ hole ] = std::move( array[ 0 ] );
+} 
+</code></pre>
+<h3 id="applications-of-priority-queues">Applications of Priority Queues</h3>
+<h2 id="sorting">Sorting</h2>
+<h3 id="insertion-sort">Insertion Sort*</h3>
+<h3 id="quick-sort">Quick Sort</h3>
+<h4 id="pivot">Pivot策略</h4>
+<p><strong>最好/坏可能性</strong></p>
+<p>随机选择待排序序列中的一个数字作为划分字问题的标准，划分是否平均影响算法复杂度
+每次问题规模减半，a=2，b=2，d=1
+复杂度为n^2 log(n)
+最差情况下，复杂度为O(n^2)</p>
+<h4 id="a-linear-expected-time-algorithm-for-selection">A Linear-Expected-Time Algorithm for Selection</h4>
+<h3 id="linear-time-sorts-bucket-sort-and-radix-sort">Linear-Time Sorts: Bucket Sort and Radix Sort 复杂度分析</h3>
+<h3 id="_20">计（基）数排序——非比较算法</h3>
+<p>对于待排序的整数序列，从最低位到最高位每次按照相应的位排序一次
+每次递归问题规模变为原来的1/10，但需要求解10个子问题，额外运算为O(n)的，a=10，b=10，d=1
+复杂度为n^1 log(n) = nlog(n)，近似为O(kN)，k为整数的位数</p>
+<h3 id="_21">归并排序/堆排序</h3>
+<p><em>归并排序</em> ｜ 数据列均分为两部分，分别排序，之后以O(n)的复杂度进行合并，空间复杂度O(n)
+每次问题规模减半，a=2，b=2，d=1
+复杂度为nlog(n)</p>
+<h2 id="_22">图论算法</h2>
+<p>G[graph] -&gt; V[vertex],E[edge(arc)],path；digraph 有向；Weight&amp;cost 权/值；Adjacent 邻接；cycle 回路：满足w1=wN length&gt;=1；loop 环：回到自身，length=0；Simple path 简单路径；强/弱连通、基础图/完全图</p>
+<h3 id="_23">表示</h3>
+<p>Adjacent Matrix：dense <code>A[u][v]</code></p>
+<p>Adjacent List：sparse O(|E|+|V|) </p>
+<h3 id="_24">拓扑排序</h3>
+<p>find indegree=0 v1 -&gt; delete v1, neighbors indegree-1 -&gt;find indegree=0 v2...</p>
+<p><img alt="image-20211231162550699" src="/Users/ralvine/Library/Application Support/typora-user-images/image-20211231162550699.png" /></p>
+<p>O(V^2) using <Queue></p>
+<h3 id="dijkstras">Dijkstras</h3>
+<h3 id="_25">最坏可能</h3>
+<h3 id="_26">可对负边权使用的算法</h3>
+<h3 id="_27">最小生成树</h3>
+<p>如何扩张（Ch10）</p>
+<h3 id="_28">深度优先 广度优先</h3>
+<h2 id="_29">算法设计补充</h2>
+<h3 id="_30">贪心算法</h3>
+<p>ch10.1 分析复杂度</p>
+<h3 id="divide-and-conquer">分治算法 Divide-and-Conquer</h3>
+<p>分而治之，递归</p>
+<h3 id="dynamic-programming">Dynamic Programming</h3>
+<p>ch10.3 与d-c的比较（自底向上&amp;自顶向下）</p>
+<h3 id="_31">回溯法</h3>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../../ideology/mqz-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 书评" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              书评
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../pde/" class="md-footer__link md-footer__link--next" aria-label="下一页: 偏微分方程" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              偏微分方程
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Ralvine
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
